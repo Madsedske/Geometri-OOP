@@ -8,27 +8,25 @@ namespace Geometri_OOP
 {
     public class Square
     {
-        private int side;
+        public int SideA { get; set; }
 
-        public int Side
+        public Square(int sideA)
         {
-            get { return this.side; }
-            set { this.side = value; }
+            SideA = sideA;
         }
 
-        public Square(int Side)
+        public Square()
         {
-            side = Side;
         }
 
-        public int Perimeter(int side)
+        public int Perimeter(int sideA)
         {
-            return side * 4;
+            return sideA * 4;
         }
 
-        public int Area(int side)
+        public int Areal(int sideA)
         {
-            return side * 2;
+            return sideA * 2;
         }
     }
 }
