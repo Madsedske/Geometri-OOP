@@ -18,7 +18,8 @@ namespace Geometri_OOP
 
         public Rektangel(int sideB, int sideA)
         {
-
+            SideB = sideB;
+            SideA = sideA;
         }
 
         public override double Areal()

@@ -26,6 +26,7 @@ namespace Geometri_OOP
 
         public Trapez(int sideA, int sideC, int paralelSider)
         {
+            SideA = sideA;
             SideC = sideC;
             ParalelSider = paralelSider;
         }

@@ -19,7 +19,8 @@ namespace Geometri_OOP
 
         public Triangle(int sideA, int sideB)
         {
-
+            SideA = sideA;
+            SideB = sideB;
         }
 
         public override double Areal()

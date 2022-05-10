@@ -26,6 +26,7 @@ namespace Geometri_OOP
 
         public Parallelogram(int sideA, int sideB, int hældning)
         {
+            SideA = sideA;
             Hældning = hældning;
             SideB = sideB;
         }
