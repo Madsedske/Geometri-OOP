@@ -8,23 +8,34 @@ namespace Geometri_OOP
 {
     public class Trapez : Square
     {
-        public int SideC { get; set; }
-        public int ParalelSider { get; set; }
-        public Trapez()
+        private int sideC;
+
+        public int SideC
         {
+            get { return sideC; }
+            set { sideC = value; }
         }
 
-        public Trapez(int sideA, int sideC, int paralelSider) : base(sideA)
+        private int paralelSider;
+
+        public int ParalelSider 
+        {
+            get { return paralelSider; }
+            set { paralelSider = value; }
+        }
+
+        public Trapez(int sideA, int sideC, int paralelSider)
         {
             SideC = sideC;
             ParalelSider = paralelSider;
         }
 
-        public int Areal(int sideA, int paralelSider, int sideC)
+        public override double Areal()
         {
-            int s = (sideA + paralelSider - sideC + paralelSider) / 2;
-            double højde = (2 / (sideA - sideC)) * Math.Sqrt(s * (s - sideA + sideC) * (s - paralelSider) * (s - paralelSider));
-            return (int)(0.5 * (sideA + sideC) * højde);
+            int s = (SideA + paralelSider - sideC + paralelSider) / 2;
+            double højde = (2 / (SideA - sideC)) * Math.Sqrt(s * (s - SideA + sideC) * (s - paralelSider) * (s - paralelSider));
+            double areal = (0.5 * (SideA + sideC) * højde);
+            return areal;
         }
     }
 }

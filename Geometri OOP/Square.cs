@@ -8,7 +8,13 @@ namespace Geometri_OOP
 {
     public class Square
     {
-        public int SideA { get; set; }
+        private int sideA;
+
+        public int SideA
+        {
+            get { return sideA; }
+            set { sideA = value; }
+        }
 
         public Square(int sideA)
         {
@@ -17,16 +23,19 @@ namespace Geometri_OOP
 
         public Square()
         {
+
         }
 
-        public int Perimeter(int sideA)
+        public virtual int Perimeter()
         {
-            return sideA * 4;
+            int perimeter  = sideA * 4;
+            return perimeter;
         }
 
-        public int Areal(int sideA)
+        public virtual double Areal()
         {
-            return sideA * 2;
+            int areal = sideA * sideA;
+            return areal;
         }
     }
 }

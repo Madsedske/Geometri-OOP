@@ -10,32 +10,48 @@ namespace Geometri_OOP
     {
         static void Main(string[] args)
         {
-            Square square = new Square();
-            Parallelogram parallelogram = new Parallelogram();
-            Trapez trapez = new Trapez();
+            Square square = new Square(5);
+            Parallelogram paralellogram = new Parallelogram(3,5,20);
+            Trapez trapez = new Trapez(10, 8, 9);
+            Rektangel rektangel = new Rektangel(5, 10);
+            Triangle triangle = new Triangle(78, 25);
+            List<Square> list = new List<Square>() { square, paralellogram, trapez, rektangel, triangle };
 
-            Console.WriteLine("1. Square?\n2. Parallelogram?\n3. Trapez?");
-            int answer = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Skriv din a side ");
-            int sideAinput = Convert.ToInt32(Console.ReadLine());
-            if (answer == 1)                            
-                Console.WriteLine("Omkreds er " + square.Perimeter(sideAinput) + "\nAreal er " + square.Areal(sideAinput));            
-            else if (answer == 2)
+            foreach (Square n in list)
             {
-                Console.WriteLine("Skriv din b side");
-                int sideBinput = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Skriv hældning");
-                int hældninginput = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Areal af parallelogram er: " + parallelogram.Areal(sideAinput, sideBinput, hældninginput));
+                Console.WriteLine(n.Perimeter());
+                Console.WriteLine(n.Areal());
             }
-            else if (answer == 3)
-            {               
-                Console.WriteLine("Skriv din c side ");
-                int sideCinput = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Skriv paralelsiden");
-                int paralelSider = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Areal af trapez er: " + trapez.Areal(sideAinput, paralelSider, sideCinput));
-            }      
+
+
+
+            //Console.WriteLine("1. Square?\n2. Parallelogram?\n3. Trapez?");
+            //int answer = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Skriv din a side ");
+            //int sideAinput = Convert.ToInt32(Console.ReadLine());
+            //if (answer == 1)
+            //{
+            //    Console.WriteLine("Skriv din b side");
+            //    int sideBinput = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine("Areal af parallelogram er: " + square.Areal());
+            //}
+            //else if (answer == 2)
+            //{
+            //    Console.WriteLine("Skriv din b side");
+            //    int sideBinput = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine("Skriv hældning");
+            //    int hældninginput = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine("Areal af parallelogram er: " + paralellogram.Areal());
+            //}
+            //else if (answer == 3)
+            //{               
+            //    Console.WriteLine("Skriv din c side ");
+            //    int sideCinput = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine("Skriv paralelsiden");
+            //    int paralelSider = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine("Areal af trapez er: " + trapez.Areal());
+            //}      
             Console.ReadKey();
         }
     }
