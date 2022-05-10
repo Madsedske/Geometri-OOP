@@ -28,7 +28,7 @@ namespace Geometri_OOP
             return areal;
         }
 
-        public override int Perimeter()
+        public override double Perimeter()
         {
             int perimeter = 2 * (SideA + SideB);
             return perimeter;

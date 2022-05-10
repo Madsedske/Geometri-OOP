@@ -14,7 +14,7 @@ namespace Geometri_OOP
             Parallelogram paralellogram = new Parallelogram(3,5,20);
             Trapez trapez = new Trapez(10, 8, 9);
             Rektangel rektangel = new Rektangel(5, 10);
-            Triangle triangle = new Triangle(78, 25);
+            Triangle triangle = new Triangle(3, 4);
             List<Square> list = new List<Square>() { square, paralellogram, trapez, rektangel, triangle };
 
             foreach (Square n in list)

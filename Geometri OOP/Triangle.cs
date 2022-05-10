@@ -29,9 +29,9 @@ namespace Geometri_OOP
             return areal;
         }
 
-        public override int Perimeter()
+        public override double Perimeter()
         {
-            int perimeter = SideA + SideB - 180;
+            double perimeter = Math.Sqrt((SideA * SideA) + (SideB* SideB));
             return perimeter;
         }
     }

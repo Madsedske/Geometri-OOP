@@ -26,9 +26,9 @@ namespace Geometri_OOP
 
         }
 
-        public virtual int Perimeter()
+        public virtual double Perimeter()
         {
-            int perimeter  = sideA * 4;
+            double perimeter  = sideA * 4;
             return perimeter;
         }
 
